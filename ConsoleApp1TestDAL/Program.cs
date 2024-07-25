@@ -2,6 +2,8 @@
 using Entities.Models;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
+using Microsoft.Identity.Client;
+
 
 CreateAsync().GetAwaiter().GetResult();
 RetrieveAsync().GetAwaiter().GetResult();
