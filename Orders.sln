@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1TestDAL", "Conso
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{040C763E-9A31-482C-BCA1-E245CB04FB38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLC", "SLC\SLC.csproj", "{B4C34FFF-6282-465E-B05B-ED7DEA8CE1E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SLC", "SLC\SLC.csproj", "{B4C34FFF-6282-465E-B05B-ED7DEA8CE1E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{8FC741D0-490D-4A07-BD93-C5F2299CE24A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B4C34FFF-6282-465E-B05B-ED7DEA8CE1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4C34FFF-6282-465E-B05B-ED7DEA8CE1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4C34FFF-6282-465E-B05B-ED7DEA8CE1E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC741D0-490D-4A07-BD93-C5F2299CE24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC741D0-490D-4A07-BD93-C5F2299CE24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC741D0-490D-4A07-BD93-C5F2299CE24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC741D0-490D-4A07-BD93-C5F2299CE24A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
