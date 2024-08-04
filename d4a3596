@@ -1,0 +1,27 @@
+[33md4a3596[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m HEAD@{0}: merge feature/ProxyService: Fast-forward
+[33m260593a[m HEAD@{1}: checkout: moving from feature/ProxyService to develop
+[33md4a3596[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m HEAD@{2}: commit: feat(ProxyService): Add interfaz and class CustomerProxy
+[33m260593a[m HEAD@{3}: checkout: moving from develop to feature/ProxyService
+[33m260593a[m HEAD@{4}: merge feature/Service: Merge made by the 'ort' strategy.
+[33m401348e[m HEAD@{5}: checkout: moving from feature/Service to develop
+[33m5a1ccc0[m HEAD@{6}: commit: feat(Service): Add services layer
+[33m401348e[m HEAD@{7}: reset: moving to HEAD~1
+[33ma51fa7d[m HEAD@{8}: commit: feat(Service): Added [200~services layer
+[33m401348e[m HEAD@{9}: checkout: moving from develop to feature/Service
+[33m401348e[m HEAD@{10}: merge feature/SLC: Merge made by the 'ort' strategy.
+[33md96dd51[m HEAD@{11}: checkout: moving from feature/SLC to develop
+[33m21ed765[m HEAD@{12}: commit: feat(SLC): Added Class library and Inteface ICustomerService
+[33md96dd51[m HEAD@{13}: checkout: moving from develop to feature/SLC
+[33md96dd51[m HEAD@{14}: merge feature/BLL: Merge made by the 'ort' strategy.
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{15}: checkout: moving from feature/BLL to develop
+[33md6c7d3a[m HEAD@{16}: commit: feat(BLL): Added method to search, update, delete and list the clients
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{17}: checkout: moving from develop to feature/BLL
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{18}: checkout: moving from feature/Repositorio to develop
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{19}: checkout: moving from feature/Repositorio to feature/Repositorio
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{20}: checkout: moving from develop to feature/Repositorio
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{21}: checkout: moving from main to develop
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{22}: merge develop: Fast-forward
+[33mfe82a57[m HEAD@{23}: checkout: moving from develop to main
+[33m5b18248[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/feature/Repositorio[m[33m, [m[1;32mmain[m[33m, [m[1;32mfeature/Repositorio[m[33m)[m HEAD@{24}: commit: feat(back-end): Add Layers DAL, Entities and ConsoleApp
+[33mfe82a57[m HEAD@{25}: checkout: moving from main to develop
+[33mfe82a57[m HEAD@{26}: commit (initial): feat(back-end): Add Files ConsoleAppTestDal, DAL, Entities
