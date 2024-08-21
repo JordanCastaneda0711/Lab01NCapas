@@ -3,51 +3,131 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TeddyShopParadise</title>
+    <title>@ViewData["Title"] - Private Investigation Technology</title>
+
+    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Include Custom CSS Files -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApplicationOrders.styles.css" asp-append-version="true" />
+
+    <!-- Include Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Optional: Inline styles for testing -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5; /* Fondo claro */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #006d77; /* Azul oscuro */
+            padding: 1rem;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important; /* Blanco */
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff; /* Borde del toggle en blanco */
+        }
+
+        .button-container {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .custom-button {
+            color: #ffffff; /* Blanco */
+            background-color: #0096c7; /* Azul brillante */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px; /* Botón ovalado */
+            text-decoration: none;
+            font-weight: 600; /* Negrita */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+        }
+
+            .custom-button:hover {
+                background-color: #ffffff;
+                transform: scale(1.05);
+            }
+
+        .footer {
+            background-color: #003d40; /* Azul muy oscuro */
+            color: #ffffff; /* Blanco */
+            padding: 1rem;
+            text-align: center;
+        }
+
+            .footer a {
+                color: #cce0e3 !important; /* Gris claro */
+                text-decoration: none; /* Sin subrayado */
+            }
+
+                .footer a:hover {
+                    text-decoration: underline; /* Subrayado en hover */
+                }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TeddyShopParadise</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ordenes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
                         </li>
                     </ul>
+                    <div class="button-container">
+                        <a href="@Url.Action("Index", "Product")" class="custom-button">Productos</a>
+                        <a href="@Url.Action("Index", "Customer")" class="custom-button">Clientes</a>
+                        <a href="@Url.Action("Index", "Supplier")" class="custom-button">Proveedores</a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+
+    <div class="container mt-4">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - TeddyShopParadise - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    @if (ViewData["Title"] == "Inicio")
+    {
+        <footer class="footer">
+            <div class="container">
+                &copy; 2024 <a asp-area="" asp-controller="Home" asp-action="Privacy">- Privacidad</a>
+            </div>
+        </footer>
+    }
+
+    <!-- Include JavaScript Files -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Render additional scripts -->
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

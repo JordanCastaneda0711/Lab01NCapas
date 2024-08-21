@@ -1,0 +1,69 @@
+﻿@model Entities.Models.Product
+
+@{
+    ViewData["Title"] = "Editar Producto";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Editar Producto</h1>
+
+    <div class="card p-4 shadow-sm">
+        <h4 class="card-title">Detalles del Producto</h4>
+        <hr />
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="ProductName" class="form-label">Nombre del Producto</label>
+                <input asp-for="ProductName" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="ProductName"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="SupplierId" class="form-label">ID del Proveedor</label>
+                <input asp-for="SupplierId" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="SupplierId"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="UnitPrice" class="form-label">Precio Unitario</label>
+                <input asp-for="UnitPrice" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="UnitPrice"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Package" class="form-label">Paquete</label>
+                <input asp-for="Package" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="Package"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="IsDiscontinued" class="form-label">Descontinuado</label>
+                <input asp-for="IsDiscontinued" type="checkbox" class="form-check-input" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="IsDiscontinued"></span>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a la Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

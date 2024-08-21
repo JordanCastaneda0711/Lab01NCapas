@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -9,22 +10,22 @@ namespace DAL
 {
     public interface IRepository : IDisposable
     {
-        //Agregar una nueva entidad a la base da datos
+        // Agregar una nueva entidad a la base de datos 
         Task<TEntity> CreateAsync<TEntity>(TEntity toCreate) where TEntity : class;
 
-        // para eliminar una entidad 
-         Task<bool> DeleteAsync<TEntity>(TEntity toDelete) where TEntity : class;
+        //Para Eliminar una entidad
+        Task<bool> DeleteAsync<TEntity>(TEntity toDelete) where TEntity : class;
 
-        // para actualizar una entidad
-        Task <bool> UpdateAsync<TEntity>(TEntity toUpdate) where TEntity : class;
+        // Para actualizar una entidad
+        Task<bool> UpdateAsync<TEntity>(TEntity toUpdate) where TEntity : class;
 
-        // para recuperar una entidad con base en un criterio
+        //Para recuperar una entidad con base en un criterio 
+        Task<TEntity> RetrieveAsync<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class;
 
-        Task <TEntity> RetreiveAsync<TEntity>(Expression<Func<TEntity, bool>> criteria)where TEntity : class;
-
-        //para recuperar un conjunto de entidades con base en un criterio de busqueda
+        //Para recuperar un conjunto de entidades con base en un criterio de busqueda 
 
         Task<List<TEntity>> FilterAsync<TEntity>(Expression<Func<TEntity, bool>> criteria) where TEntity : class;
 
     }
 }
+

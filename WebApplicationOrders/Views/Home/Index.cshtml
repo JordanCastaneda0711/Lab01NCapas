@@ -1,8 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Pagina De Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center" style="background-color: #006d77 color: #ffffff; padding: 20px;">
+    <h1 class="display-4">Bienvenidos</h1>
+</div>
+
+<!-- Carrusel de imágenes -->
+<div id="imageCarousel" class="carousel slide mx-auto mt-4" data-bs-ride="carousel" style="max-width: 70%; border: 2px solid #17a2b8; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/Orden01.jpg" class="d-block w-100" alt="Biblioteca moderna" style="border-radius: 8px;">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/orden02.jpg" class="d-block w-100" alt="Estanterías de libros" style="border-radius: 8px;">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev" style="color: #17a2b8;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next" style="color: #17a2b8;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
 </div>

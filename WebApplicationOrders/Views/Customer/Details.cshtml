@@ -1,0 +1,62 @@
+﻿@model Entities.Models.Customer
+
+@{
+    ViewData["Title"] = "Detalles del Cliente";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Detalles del Cliente</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="bg-light p-4 rounded shadow-sm">
+                <h4 class="mb-4">Información del Cliente</h4>
+                <hr />
+
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        ID
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.Id
+                    </dd>
+                    <dt class="col-sm-4">
+                        Nombre
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.FirstName
+                    </dd>
+                    <dt class="col-sm-4">
+                        Apellido
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.LastName
+                    </dd>
+                    <dt class="col-sm-4">
+                        Ciudad
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.City
+                    </dd>
+                    <dt class="col-sm-4">
+                        País
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.Country
+                    </dd>
+                    <dt class="col-sm-4">
+                        Teléfono
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.Phone
+                    </dd>
+                </dl>
+
+                <div class="text-center mt-4">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-lg"><i class="fas fa-edit"></i> Editar</a>
+                    <a asp-action="Index" class="btn btn-secondary btn-lg ms-2"><i class="fas fa-arrow-left"></i> Volver a la Lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

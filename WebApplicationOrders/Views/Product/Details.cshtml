@@ -1,0 +1,54 @@
+﻿@model Entities.Models.Product
+
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Detalles del Producto</h1>
+
+    <div class="card p-4 shadow-sm">
+        <h4 class="card-title">Información del Producto</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">
+                ID
+            </dt>
+            <dd class="col-sm-9">
+                @Model.Id
+            </dd>
+            <dt class="col-sm-3">
+                Nombre del Producto
+            </dt>
+            <dd class="col-sm-9">
+                @Model.ProductName
+            </dd>
+            <dt class="col-sm-3">
+                ID del Proveedor
+            </dt>
+            <dd class="col-sm-9">
+                @Model.SupplierId
+            </dd>
+            <dt class="col-sm-3">
+                Precio Unitario
+            </dt>
+            <dt class="col-sm-3">
+                Paquete
+            </dt>
+            <dd class="col-sm-9">
+                @Model.Package
+            </dd>
+            <dt class="col-sm-3">
+                Descontinuado
+            </dt>
+            <dd class="col-sm-9">
+                @(Model.IsDiscontinued ? "Sí" : "No")
+            </dd>
+        </dl>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary me-2"><i class="fas fa-edit"></i> Editar</a>
+        <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a la Lista</a>
+    </div>
+</div>

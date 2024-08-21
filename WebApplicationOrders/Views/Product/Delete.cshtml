@@ -1,0 +1,83 @@
+﻿@model Entities.Models.Product
+
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Eliminar Producto</h1>
+
+    <h4>Detalles del Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            ID
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Id
+        </dd>
+        <dt class="col-sm-2">
+            Nombre del Producto
+        </dt>
+        <dd class="col-sm-10">
+            @Model.ProductName
+        </dd>
+        <dt class="col-sm-2">
+            ID del Proveedor
+        </dt>
+        <dd class="col-sm-10">
+            @Model.SupplierId
+        </dd>
+        <dt class="col-sm-2">
+            Precio Unitario
+        </dt>
+        <dd class="col-sm-10">
+            @Model.UnitPrice
+        </dd>
+        <dt class="col-sm-2">
+            Paquete
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Package
+        </dd>
+        <dt class="col-sm-2">
+            Descontinuado
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.IsDiscontinued ? "Sí" : "No")
+        </dd>
+    </dl>
+
+    <div class="d-flex justify-content-between">
+        <form asp-controller="Product" asp-action="Delete" method="post" id="deleteForm">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger" id="deleteButton"><i class="fas fa-trash-alt"></i> Eliminar</button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a la Lista</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("deleteButton").addEventListener("click", function (event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡No podrás recuperar este producto!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, eliminar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById("deleteForm").submit();
+                    }
+                });
+            });
+        });
+    </script>
+}

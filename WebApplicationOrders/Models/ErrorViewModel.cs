@@ -1,4 +1,4 @@
-﻿namespace WebApplicationOrders.Models
+namespace WebApplicationOrders.Models
 {
     public class ErrorViewModel
     {

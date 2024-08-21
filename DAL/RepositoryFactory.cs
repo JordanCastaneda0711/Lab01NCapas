@@ -10,7 +10,7 @@ namespace DAL
     {
         public static IRepository CreateRepository()
         {
-            return new IFRepositorio(new Datos.ApplicationDbContext());
+            return new EFRepository(new Datos.ApplicationDbContext());
         }
     }
 }
